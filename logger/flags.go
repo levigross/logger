@@ -20,7 +20,6 @@ package logger
 
 import (
 	"fmt"
-	"os"
 	"strconv"
 	"strings"
 
@@ -28,12 +27,6 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
-
-var zapFlagSet = pflag.NewFlagSet(os.Args[0], pflag.ExitOnError)
-
-func GetZapFlagSet() *pflag.FlagSet {
-	return zapFlagSet
-}
 
 var levelStrings = map[string]zapcore.Level{
 	"debug": zap.DebugLevel,

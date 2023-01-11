@@ -39,7 +39,7 @@ type NewEncoderFunc func(...EncoderConfigOption) zapcore.Encoder
 // uses KubeAwareEncoder which adds Type information and
 // Namespace/Name to the log.
 func New(opts ...Opts) *zap.Logger {
-	return nil
+	return NewRaw(opts...)
 }
 
 // Opts allows to manipulate Options.
